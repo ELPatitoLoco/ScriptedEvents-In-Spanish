@@ -4,9 +4,8 @@
 
 
 # ScriptedEvents
-SCP:SL Exiled plugin to create event "scripts". These scripts can be set up to run once per round, multiple times per round, or by command only.
-
 Un plugin de SCP:SL hecho con Exiled para crear eventos "scripts". Los scripts pueden ser hechos para ser usados una vez por ronda, multiples o por solo con commandos.
+
 ## Getting Started
 Aviso: Este plugin es muy complejo y tiene un montón de características. Sin embargo, una vez que lo entiendes, las capacidades son casi infinitas. Mi mejor sugerencia es jugar y probar cosas con el plugin, ya que es la forma más fácil de aprenderlo. Algunos consejos para empezar:
 * Lee los documentos que se generan cuando instalas el plugin por primera vez y reinicias el servidor. La consola te dirá dónde se encuentran la primera vez (normalmente directamente dentro de la carpeta de Configuracion(Ejemplo: EXILED/Configs)).
