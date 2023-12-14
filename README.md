@@ -8,20 +8,20 @@ SCP:SL Exiled plugin to create event "scripts". These scripts can be set up to r
 
 Un plugin de SCP:SL hecho con Exiled para crear eventos "scripts". Los scripts pueden ser hechos para ser usados una vez por ronda, multiples o por solo con commandos.
 ## Getting Started
-Fair warning: This plugin is very complex and has a lot of features. However, once you understand it, the capabilities are close to endless. My best suggestion is to play around with the plugin, as that's the easiest way to learn it. Tips to get started include:
-* Read the documents that are generated when you first install the plugin and restart the server. Your console will tell you where they are located the first time (typically directly inside the Configs folder).
-* The `shelp` server console command is going to help you out a ton! This command will generate documentation and open it in a `.txt` file. Type `shelp LIST` in your server console to generate a list of actions.
-  * Note to Pterodactyl users: Pterodactyl does not like opening files on demand and will generally throw a permission error. It will still generate the file inside your `Configs/ScriptedEvents` folder, it will just not open it. As such, it is encouraged to use a local server for using this command.
-* The parent remote-admin command for this plugin is `scriptedevents` (aliases: `script`, `scr`). Running this command will show examples on how to use it.
+Aviso: Este plugin es muy complejo y tiene un montón de características. Sin embargo, una vez que lo entiendes, las capacidades son casi infinitas. Mi mejor sugerencia es jugar y probar cosas con el plugin, ya que es la forma más fácil de aprenderlo. Algunos consejos para empezar:
+* Lee los documentos que se generan cuando instalas el plugin por primera vez y reinicias el servidor. La consola te dirá dónde se encuentran la primera vez (normalmente directamente dentro de la carpeta de Configuracion(Ejemplo: EXILED/Configs)).
+* El comando `shelp` de la consola del servidor te va a ayudar mucho. Este comando generará documentación y la abrirá en un archivo `.txt`. Escribe `shelp LIST` en tu consola de servidor para generar una lista de acciones.
+  * Nota para los usuarios de Pterodactyl: A Pterodactyl no le gusta abrir archivos bajo demanda y generalmente arrojará un error de permiso. Aún así generará el archivo dentro de su carpeta `Configs/ScriptedEvents`, sólo que no lo abrirá. Como tal, se recomienda utilizar un servidor local para el uso de este comando.
+* El comando padre de remote-admin para este plugin es `scriptedevents` (alias: `script`, `scr`). Ejecutar este comando mostrará ejemplos de cómo usarlo.
 
-### Permissions
-* `script.action` - Run a single non-logic action via command.
-* `script.execute` - Execute a script.
-* `script.list` - View all scripts.
-* `script.read` - Read a script.
-* `script.stopall` - Stop all running scripts.
+### Permisos
+* `script.action` - Ejecutar una única acción no lógica mediante comando.
+* `script.execute` - Ejecutar un script.
+* `script.list` - Ver todos los scripts.
+* `script.read` - Leer un script.
+* `script.stopall` - Detener todos los scripts en ejecución.
 
-### Default Config
+### Configuracion por defecto
 ```yml
 scripted_events:
 # Whether or not to enable the Scripted Events plugin.
@@ -48,17 +48,18 @@ scripted_events:
   on: {}
 ```
 
-## For developers
-There are two methods for adding your own actions to ScriptedEvents in your plugin.
+## Para desarolladores
+Hay dos metodos para añadir tus propias acciones a ScriptedEvents en tu plugin.
 
-### Directly Referencing Plugin
+### Plugin de referencia directa
 This method works by adding a reference to the plugin.
+Este metodo funciona añadiendo una referencia al plugin.
 
-Create a new class, it needs to inherit `ScriptedEvents.API.Actions.IAction`, then implement this interface.
+Crea una nueva clase, necesita heredar `ScriptedEvents.API.Actions.IAction`, luego implementar esta interfaz. 
 
-Then, in your OnEnabled, add `ScriptedEvents.API.ApiHelper.RegisterActions();`
+Entonces, en tu OnEnabled añade `ScriptedEvents.API.ApiHelper.RegisterActions();`
 
-The problem with using this method is that your plugin will ONLY function if ScriptedEvents is also installed, which is not ideal servers may use your plugin but not ScriptedEvents.
+El problema de usar este método es que su plugin SÓLO funcionará si ScriptedEvents también está instalado, lo que no es ideal ya que puede que un servidor use tu plugin pero no ScriptedEvents.
 
 ### Reflection
 The alternative to the above method is by using reflection to access the `ApiHelper` class. From there, call the `RegisterCustomAction(string, Func<string[], Tuple<bool, string>>)` method.
