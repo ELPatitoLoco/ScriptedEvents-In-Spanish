@@ -60,12 +60,12 @@ Entonces, en tu OnEnabled añade `ScriptedEvents.API.ApiHelper.RegisterActions()
 
 El problema de usar este método es que su plugin SÓLO funcionará si ScriptedEvents también está instalado, lo que no es ideal ya que puede que un servidor use tu plugin pero no ScriptedEvents.
 
-### Reflection
-The alternative to the above method is by using reflection to access the `ApiHelper` class. From there, call the `RegisterCustomAction(string, Func<string[], Tuple<bool, string>>)` method.
+### Refleccion
+La alternativa al método anterior es utilizar reflection para acceder a la `ApiHelper`. Desde allí, llama al método `RegisterCustomAction(string, Func<string[], Tuple<bool, string><>)`.
 
-The above method takes a string, the name of the plugin, and it takes a defined function. This function gives you a `string[]`, representing the arguments that were given from the script. It must return a `Tuple<bool, string>`, with the bool representing whether or not execution was successful, and the message to show. If it is NOT successful, a message should be provided. If it is successful, a message is optional (should be set to `string.Empty`).
+El método anterior toma una cadena, el nombre del plugin, y toma una función definida. Esta función te da una `cadena[]`, que representa los argumentos que fueron dados desde el script. Debe devolver una `Tuple<bool, string>`, con el bool representando si la ejecución fue exitosa o no, y el mensaje a mostrar. Si NO tiene éxito, se debe proporcionar un mensaje. Si tiene éxito, el mensaje es opcional (debería ser `string.Empty`).
 
-If your plugin is disabled in-game, and Scripted Events is still running, this may cause a problem if a script uses your action. As such, it is recommended to call the `ApiHelper.UnregisterCustomAction(string name)` method if your action is no longer usable.
+Si tu plugin está deshabilitado en el juego, y Scripted Events sigue ejecutándose, esto puede causar un problema si un script utiliza tu acción. Por ello, se recomienda llamar al método `ApiHelper.UnregisterCustomAction(string name)` si tu acción ya no es utilizable.
 
 For ease of debugging, both `RegisterCustomAction` and `UnregisterCustomAction` return a string message representing whether or not they were successful.
 
