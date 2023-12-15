@@ -51,7 +51,6 @@ scripted_events:
 Hay dos metodos para añadir tus propias acciones a ScriptedEvents en tu plugin.
 
 ### Plugin de referencia directa
-This method works by adding a reference to the plugin.
 Este metodo funciona añadiendo una referencia al plugin.
 
 Crea una nueva clase, necesita heredar `ScriptedEvents.API.Actions.IAction`, luego implementar esta interfaz. 
