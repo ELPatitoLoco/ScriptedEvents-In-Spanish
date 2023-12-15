@@ -5,8 +5,6 @@
 
 ### ADVERTENCIA 
 Este repositorio ha sido creado para aquellas personas que quieran usar el plugin y sepan poco o nada de Ingles, si sabes ingles te recomiendo enormemente usar el [repositorio original](https://github.com/Thundermaker300/ScriptedEvents), he traducido todo como he podido pero obviamente no es perfecto y si de verdad quieres programar te recomiendo aprender ingles, todo dicho si necesitas ayuda pingeame en discord o enviame un mensaje(el_patito).
-Plugin original hecho por **ThunderMaker300**
-Traducido por el_patto_loco
 
 # ScriptedEvents
 Un plugin de SCP:SL hecho con Exiled para crear eventos "scripts". Los scripts pueden ser hechos para ser usados una vez por ronda, multiples o por solo con commandos.
@@ -80,3 +78,7 @@ Para ver un ejemplo de este método en acción, consulte la implementación del 
 #### Otra Api de Refleccion
 * `IEnumerable<Player> ApiHelper.GetPlayers(string input, int max = -1)` - Obtiene una lista de jugadores basada en las variables de entrada, y una cantidad máxima para seleccionar un máximo aleatorio. Esto debería usarse en lugar del clásico `Player.Get()` ya que este método también soporta todas las variables de Scripted Events (incluyendo variables definidas por el usuario).
 * `Tuple<bool, float> ApiHelper.Math(string input)` - Realiza un cálculo matemático utilizando la cadena dada. Este método admite todas las variables de Scripted Events (incluidas las variables definidas por el usuario). Devuelve un booleano de éxito y el resultado de la ecuación como un float.
+
+### Creditos
+Plugin original hecho por **ThunderMaker300** <br/>
+Traducido por el_patto_loco
