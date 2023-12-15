@@ -5,6 +5,8 @@
 
 ### ADVERTENCIA 
 Este repositorio ha sido creado para aquellas personas que quieran usar el plugin y sepan poco o nada de Ingles, si sabes ingles te recomiendo enormemente usar el [repositorio original](https://github.com/Thundermaker300/ScriptedEvents), he traducido todo como he podido pero obviamente no es perfecto y si de verdad quieres programar te recomiendo aprender ingles, todo dicho si necesitas ayuda pingeame en discord o enviame un mensaje(el_patito).
+Plugin original hecho por **ThunderMaker300**
+Traducido por el_patto_loco
 
 # ScriptedEvents
 Un plugin de SCP:SL hecho con Exiled para crear eventos "scripts". Los scripts pueden ser hechos para ser usados una vez por ronda, multiples o por solo con commandos.
