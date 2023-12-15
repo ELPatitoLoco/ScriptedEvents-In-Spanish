@@ -1,7 +1,7 @@
 ![VERSION](https://img.shields.io/github/v/release/Thundermaker300/ScriptedEvents?include_prereleases&style=for-the-badge)
 ![DOWNLOADS](https://img.shields.io/github/downloads/Thundermaker300/ScriptedEvents/total?style=for-the-badge)
 [![DISCORD](https://img.shields.io/discord/1060274824330620979?label=Discord&style=for-the-badge)](https://discord.gg/3j54zBnbbD)
-
+ADVERTENCIA, Este repositorio ha sido creado para aquellas personas que quieran usar el plugin y sepan poco o nada de Ingles, si sabes ingles te recomiendo enormemente usar el [repositorio original](https://github.com/Thundermaker300/ScriptedEvents), he traducido todo como he podido pero obviamente no es perfecto y si de verdad quieres programar te recomiendo aprender ingles, todo dicho si necesitas ayuda pingeame en discord o enviame un mensaje(el_patito).
 
 # ScriptedEvents
 Un plugin de SCP:SL hecho con Exiled para crear eventos "scripts". Los scripts pueden ser hechos para ser usados una vez por ronda, multiples o por solo con commandos.
@@ -66,12 +66,12 @@ El método anterior toma una cadena, el nombre del plugin, y toma una función d
 
 Si tu plugin está deshabilitado en el juego, y Scripted Events sigue ejecutándose, esto puede causar un problema si un script utiliza tu acción. Por ello, se recomienda llamar al método `ApiHelper.UnregisterCustomAction(string name)` si tu acción ya no es utilizable.
 
-For ease of debugging, both `RegisterCustomAction` and `UnregisterCustomAction` return a string message representing whether or not they were successful.
+Para facilitar el "debugging", tanto `RegisterCustomAction` como `UnregisterCustomAction` devuelven una cadena de texto(string) que representa si tuvieron éxito o no.
 
-This method is much more recommended, as your plugin does not need to have Scripted Events installed in order for your plugin to function. However, it is not as straight forward as the previous method, and reflection is significantly slower than the previous method (which is why you only need to use it once in your plugin).
+Este método es mucho más recomendable, ya que tu plugin no necesita tener Scripted Events instalado para que tu plugin funcione. Sin embargo, no es tan sencillo como el método anterior, y reflección es significativamente más lenta que el método anterior (razón por la cual sólo necesitas usarlo una vez en tu plugin).
 
-To view an example of this method in action, see the [Round Reports](https://github.com/Thundermaker300/RoundReports/blob/master/RoundReports/ScriptedEventsIntegration.cs) implementation of it.
+Para ver un ejemplo de este método en acción, consulte la implementación del mismo en [Informes de ronda(Round Reports)](https://github.com/Thundermaker300/RoundReports/blob/master/RoundReports/ScriptedEventsIntegration.cs).
 
-#### Other Reflection API
-* `IEnumerable<Player> ApiHelper.GetPlayers(string input, int max = -1)` - Gets a list of players based on input variables, and a maximum amount to select a random maximum. This should be used instead of the classic `Player.Get()` as this method also supports all of Scripted Events' variables (including user-defined variables).
-* `Tuple<bool, float> ApiHelper.Math(string input)` - Performs a math calculation using the given string. This method supports all of Scripted Events' variables (including user-defined variables). Returns a success boolean and the result of the equation as a float.
+#### Otra Api de Refleccion
+* `IEnumerable<Player> ApiHelper.GetPlayers(string input, int max = -1)` - Obtiene una lista de jugadores basada en las variables de entrada, y una cantidad máxima para seleccionar un máximo aleatorio. Esto debería usarse en lugar del clásico `Player.Get()` ya que este método también soporta todas las variables de Scripted Events (incluyendo variables definidas por el usuario).
+* `Tuple<bool, float> ApiHelper.Math(string input)` - Realiza un cálculo matemático utilizando la cadena dada. Este método admite todas las variables de Scripted Events (incluidas las variables definidas por el usuario). Devuelve un booleano de éxito y el resultado de la ecuación como un float.
