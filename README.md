@@ -3,7 +3,8 @@
 [![DISCORD](https://img.shields.io/discord/1060274824330620979?label=Discord&style=for-the-badge)](https://discord.gg/3j54zBnbbD)
 
 
-**ADVERTENCIA**, Este repositorio ha sido creado para aquellas personas que quieran usar el plugin y sepan poco o nada de Ingles, si sabes ingles te recomiendo enormemente usar el [repositorio original](https://github.com/Thundermaker300/ScriptedEvents), he traducido todo como he podido pero obviamente no es perfecto y si de verdad quieres programar te recomiendo aprender ingles, todo dicho si necesitas ayuda pingeame en discord o enviame un mensaje(el_patito).
+### ADVERTENCIA 
+Este repositorio ha sido creado para aquellas personas que quieran usar el plugin y sepan poco o nada de Ingles, si sabes ingles te recomiendo enormemente usar el [repositorio original](https://github.com/Thundermaker300/ScriptedEvents), he traducido todo como he podido pero obviamente no es perfecto y si de verdad quieres programar te recomiendo aprender ingles, todo dicho si necesitas ayuda pingeame en discord o enviame un mensaje(el_patito).
 
 # ScriptedEvents
 Un plugin de SCP:SL hecho con Exiled para crear eventos "scripts". Los scripts pueden ser hechos para ser usados una vez por ronda, multiples o por solo con commandos.
