@@ -81,4 +81,4 @@ Para ver un ejemplo de este método en acción, consulte la implementación del 
 
 ### Creditos
 Plugin original hecho por **ThunderMaker300** <br/>
-Traducido por el_patto_loco
+Traducido por el_patito_loco
